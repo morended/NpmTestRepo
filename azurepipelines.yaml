@@ -1,0 +1,20 @@
+trigger:
+- main
+
+pool: 
+  name: 'Default'
+
+stages:
+- stage: NpmValidation
+  jobs:
+  - job: NpmBasicNonCompliant
+    displayName: Npm Build branch 
+    pool: 'Default'
+    steps:
+    - checkout: https://github.com/morended/NpmTestRepo/tree/BasicNonCompliant
+      displayName: Checkout Branch BasicNonCompliant
+
+    - task: nuget-security-analysis@0
+      displayName: SSC Task (Staging)
+      continueOnError: true
+  
