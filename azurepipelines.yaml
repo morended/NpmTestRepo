@@ -11,8 +11,8 @@ stages:
     displayName: Npm Build branch 
     pool: 'Default'
     steps:
-    - checkout: https://github.com/morended/NpmTestRepo/tree/BasicNonCompliant
-      displayName: Checkout Branch BasicNonCompliant
+    - checkout: self
+      displayName: 'Checkout the repository'
 
     - task: nuget-security-analysis@0
       displayName: SSC Task (Staging)
