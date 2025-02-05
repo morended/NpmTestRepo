@@ -7,14 +7,10 @@ pool:
 stages:
 - stage: NpmValidation
   jobs:
-  - job: NpmBasicNonCompliant
-    displayName: Npm Build branch 
+  - job: NpmValidation
+    displayName: Npm Validation
     pool: 'Default'
     steps:
     - checkout: self
       displayName: 'Checkout the repository'
-
-    - task: nuget-security-analysis@0
-      displayName: SSC Task (Staging)
-      continueOnError: true
   
