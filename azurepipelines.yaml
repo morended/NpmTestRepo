@@ -20,20 +20,27 @@ stages:
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
+      continueOnError: true
     
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/BasicNonCompliant'
+      continueOnError: true
+    
     
     
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcNoDefault'
+      continueOnError: true
+    
       
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcScopedNonAA'
+      continueOnError: true
+    
     
