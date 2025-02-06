@@ -13,8 +13,9 @@ stages:
     steps:
     - checkout: self
       displayName: 'Checkout the repository'
-    
-    
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: '$(Build.SourcesDirectory)/NpmrcNonAA/.npmrc'
     - task: Npm@1
       inputs:
         command: 'install'
