@@ -13,14 +13,6 @@ stages:
     steps:
     - checkout: self
       displayName: 'Checkout the repository'
-    - task: PowerShell@2
-      inputs:
-        targetType: 'inline'
-        script: |
-          # Write your PowerShell commands here.
-          
-          Write-Host "Hello World"
-          Get-ChildItem -Path 
     - task: Npm@1
       inputs:
         command: 'install'
