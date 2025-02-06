@@ -28,3 +28,4 @@ stages:
         workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
         customRegistry: 'useFeed'
         customFeed: 'https://pkgs.dev.azure.com/mseng/AzureDevOps/_packaging/AzureDevOps_PublicPackages/npm/registry/'
+        verbose: true
