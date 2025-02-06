@@ -13,4 +13,6 @@ stages:
     steps:
     - checkout: self
       displayName: 'Checkout the repository'
-  
+
+    - script: cd $(Build.SrcDirectory)/BasicNonCompliant && npm install --verbose
+      
