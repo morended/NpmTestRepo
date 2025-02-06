@@ -20,12 +20,8 @@ stages:
           # Write your PowerShell commands here.
           
           Write-Host "Hello World"
-          Get-ChildItem -Path $(Build.SourcesDirectory)
-
+          Get-ChildItem -Path 
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
-        customRegistry: 'useFeed'
-        customFeed: 'https://pkgs.dev.azure.com/mseng/AzureDevOps/_packaging/AzureDevOps_PublicPackages/npm/registry/'
-        verbose: true
