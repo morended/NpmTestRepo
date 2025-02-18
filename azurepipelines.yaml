@@ -15,32 +15,13 @@ stages:
       displayName: 'Checkout the repository'
     - task: npmAuthenticate@0
       inputs:
-        workingFile: '$(Build.SourcesDirectory)/NpmrcNonAA/.npmrc'
+        workingFile: '$(Build.SourcesDirectory)/BasicNonCompliant/.npmrc'
  
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/BasicNonCompliant'
         verbose: true
-        continueOnError: true
-    
-    - task: Npm@1
-      inputs:
-        command: 'install'
-        workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
-        verbose: true
-    
-    - task: Npm@1
-      inputs:
-        command: 'install'
-        workingDir: '$(Build.SourcesDirectory)/NpmrcNoDefault'
-        verbose: true
-
-    - task: Npm@1
-      inputs:
-        command: 'install'
-        workingDir: '$(Build.SourcesDirectory)/NpmrcScopedNonAA'
-        verbose: true
-    
+        
     
     
