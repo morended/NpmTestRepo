@@ -16,16 +16,17 @@ stages:
     - task: npmAuthenticate@0
       inputs:
         workingFile: '$(Build.SourcesDirectory)/NpmrcNonAA/.npmrc'
+ 
     - task: Npm@1
       inputs:
         command: 'install'
-        workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
+        workingDir: '$(Build.SourcesDirectory)/BasicNonCompliant'
         verbose: true
     
     - task: Npm@1
       inputs:
         command: 'install'
-        workingDir: '$(Build.SourcesDirectory)/BasicNonCompliant'
+        workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
         verbose: true
     
     - task: Npm@1
