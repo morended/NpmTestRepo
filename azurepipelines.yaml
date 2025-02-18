@@ -20,21 +20,25 @@ stages:
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcNonAA'
+        verbose: true
     
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/BasicNonCompliant'
+        verbose: true
     
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcNoDefault'
-       
+        verbose: true
+
     - task: Npm@1
       inputs:
         command: 'install'
         workingDir: '$(Build.SourcesDirectory)/NpmrcScopedNonAA'
+        verbose: true
     
     
     
